@@ -2,9 +2,8 @@ import { useEffect, useState } from "react";
 import Count from "./Count";
 import ButtonContainer from "./ButtonContainer";
 import ResetButton from "./ResetButton";
-import Title from "./title";
 import CountButton from "./CountButton";
-
+import Title from "./Title";
 const Card = () => {
   const [count, setCount] = useState(() => {
     const countNumber = localStorage.getItem("count-number");
