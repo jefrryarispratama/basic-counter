@@ -5,7 +5,7 @@ const ResetButton = ({ setCount }) => {
   const handleClick = (e) => {
     setCount(0);
 
-    e.blur();
+    e.currentTarget.blur();
   };
 
   return (

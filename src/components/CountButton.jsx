@@ -6,8 +6,8 @@ function CountButton({ setCount, type, locked }) {
     setCount((count) => {
       if (type == "plus") {
         const newCount = count + 1;
-        if (newCount > 5) {
-          return 5;
+        if (newCount > 100) {
+          return 100;
         }
         return newCount;
       } else {
@@ -19,7 +19,7 @@ function CountButton({ setCount, type, locked }) {
       }
     });
 
-    event.target.blur();
+    event.currentTarget.blur();
   }
 
   return (

@@ -6,15 +6,19 @@ import Title from "./title";
 import CountButton from "./CountButton";
 
 const Card = () => {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(() => {
+    const countNumber = localStorage.getItem("count-number");
+    return countNumber ? Number(countNumber) : 0;
+  });
 
-  const locked = count == 5 ? true : false;
+  const locked = count == 100 ? true : false;
 
   useEffect(() => {
+    localStorage.setItem("count-number", count);
     const handleKeydown = (e) => {
       if (e.code === "Space") {
-        if (count >= 5) {
-          setCount(5);
+        if (count >= 100) {
+          setCount(100);
           return;
         }
         setCount(count + 1);
