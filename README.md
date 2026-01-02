@@ -10,3 +10,4 @@ Currently, two official plugins are available:
 # Basic-Counter
 
 I'm just making a basic counter, which I modified from a ByteGrad course, and storing the results in localStorage to elevate my knowledge of React.
+Press Spacebar to add number and the limit of the counter is 100. 
